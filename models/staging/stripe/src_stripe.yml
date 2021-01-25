@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+    - name: stripe
+      description: A clone of a stripe database.
+      database: raw
+      tables:
+        - name: stripe
+          description: Raw stripe data.
+          columns:
+            - name: payment_id
+              description: Primary key for stripe payments.
+              tests:
+                - unique
+                - not_null
